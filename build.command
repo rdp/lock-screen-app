@@ -9,6 +9,8 @@ cp Lock\ Screen.icns Lock\ Screensaver.app/Contents/Resources/applet.icns
 touch Lock\ Screensaver.app/Contents/Resources/applet.icns
 
 # clang -framework Foundation main.m -o lockscreen
+clang -F /System/Library/PrivateFrameworks -framework login -o lockscreen lockscreen.c 
+
 osacompile -o 'Lock Screen Bundle.app' 'Lock Screen Bundle.applescript'
 cp Lock\ Screen.icns Lock\ Screen\ Bundle.app/Contents/Resources/applet.icns 
 touch Lock\ Screen\ Bundle.app/Contents/Resources/applet.icns
